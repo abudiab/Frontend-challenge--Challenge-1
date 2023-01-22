@@ -4,6 +4,12 @@
     --main-container-bakcground: #fff;
 }
 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
     background: var(--page-background);
     display: flex;
@@ -19,4 +25,20 @@ body {
     width: 500px;
     background: var(--main-container-bakcground);
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.main-container__left-side{
+    width: 50%;
+}
+
+.main-container__right-side {
+    width: 50%;
+}
+
+.main-container__img {
+    width: 100%;
 }
