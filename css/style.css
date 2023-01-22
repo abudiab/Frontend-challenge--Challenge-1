@@ -1,0 +1,22 @@
+
+:root{
+    --page-background: #f1eae4;
+    --main-container-bakcground: #fff;
+}
+
+body {
+    background: var(--page-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-container {
+    height: 500px;
+    width: 500px;
+    background: var(--main-container-bakcground);
+    border-radius: 10px;
+}
