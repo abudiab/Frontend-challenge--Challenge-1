@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;700&display=swap');
 
 :root{
     --page-background: #f1eae4;
     --main-container-bakcground: #fff;
+    --theme-color-primary: #4f7f6a;
+    --primary-text-color: #000;
+    --secondary-text-color: #9ea0a5;
+    --primary-font: 'DM Serif Display';
+    --secondary-font: 'Montserrat';
 }
 
 * {
@@ -18,16 +24,18 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+    font-family: var(--secondary-font),'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .main-container {
     height: 500px;
-    width: 500px;
+    width: 550px;
     background: var(--main-container-bakcground);
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: hidden;
     
 }
 
@@ -37,8 +45,78 @@ body {
 
 .main-container__right-side {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
 }
 
-.main-container__img {
+.main-container__left-side__img {
     width: 100%;
+    height: 100%;
+    
+}
+
+.right-side__caption{
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.right-side__headline{
+    font-family: var(--primary-font);
+    line-height: 100%;
+    font-size: 36px;
+}
+
+.right-side__description{
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+}
+
+.right-side__prices{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+color: var(--secondary-text-color);
+}
+
+.prices__discounted-price{
+    font-family: var(--primary-font);
+    line-height: 100%;
+    font-size: 32px;
+    color: var(--theme-color-primary);
+    margin-right: 20px;
+}
+
+.prices__original-price{
+    text-decoration: line-through;
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover{
+    filter: brightness(0.9);
+}
+
+.right-side__primary-button{
+    background-color: var(--theme-color-primary);
+    color: var(--main-container-bakcground);
 }
